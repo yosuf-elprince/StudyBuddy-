@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "title": "MDN HTML",
+    "category": "HTML",
+    "link": "https://developer.mozilla.org"
+  },
+  {
+    "id": 2,
+    "title": "MDN CSS",
+    "category": "CSS",
+    "link": "https://developer.mozilla.org"
+  },
+  {
+    "id": 3,
+    "title": "MDN JS",
+    "category": "JS",
+    "link": "https://developer.mozilla.org"
+  },
+  {
+    "id": 4,
+    "title": "FreeCodeCamp",
+    "category": "Learning",
+    "link": "https://freecodecamp.org"
+  },
+  {
+    "id": 5,
+    "title": "CSS Tricks",
+    "category": "CSS",
+    "link": "https://css-tricks.com"
+  },
+  {
+    "id": 6,
+    "title": "JavaScript Info",
+    "category": "JS",
+    "link": "https://javascript.info"
+  },
+  {
+    "id": 7,
+    "title": "Can I Use",
+    "category": "Tools",
+    "link": "https://caniuse.com"
+  },
+  {
+    "id": 8,
+    "title": "Flexbox Guide",
+    "category": "CSS",
+    "link": "https://css-tricks.com/snippets/css/a-guide-to-flexbox"
+  },
+  {
+    "id": 9,
+    "title": "Grid Guide",
+    "category": "CSS",
+    "link": "https://css-tricks.com/snippets/css/complete-guide-grid"
+  },
+  {
+    "id": 10,
+    "title": "UI Patterns",
+    "category": "UI",
+    "link": "https://ui-patterns.com"
+  },
+  {
+    "id": 11,
+    "title": "Smashing Magazine",
+    "category": "UI",
+    "link": "https://smashingmagazine.com"
+  },
+  {
+    "id": 12,
+    "title": "Frontend Mentor",
+    "category": "UI",
+    "link": "https://frontendmentor.io"
+  },
+  {
+    "id": 13,
+    "title": "CodePen",
+    "category": "Tools",
+    "link": "https://codepen.io"
+  },
+  {
+    "id": 14,
+    "title": "Dribbble",
+    "category": "UI",
+    "link": "https://dribbble.com"
+  },
+  {
+    "id": 15,
+    "title": "Behance",
+    "category": "UI",
+    "link": "https://behance.net"
+  },
+  {
+    "id": 16,
+    "title": "HTML Validator",
+    "category": "Tools",
+    "link": "https://validator.w3.org"
+  },
+  {
+    "id": 17,
+    "title": "CSS Validator",
+    "category": "Tools",
+    "link": "https://jigsaw.w3.org/css-validator"
+  },
+  {
+    "id": 18,
+    "title": "Regex101",
+    "category": "Tools",
+    "link": "https://regex101.com"
+  },
+  {
+    "id": 19,
+    "title": "StackOverflow",
+    "category": "Community",
+    "link": "https://stackoverflow.com"
+  },
+  {
+    "id": 20,
+    "title": "GitHub",
+    "category": "Tools",
+    "link": "https://github.com"
+  }
+]

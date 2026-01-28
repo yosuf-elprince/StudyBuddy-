@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>StudyBuddy | Yosuf Zoher Eldaor</title>
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- =========================
+     HEADER + NAVIGATION
+     (App Shell)
+========================= -->
+  <header class="app-header">
+
+    <!-- ===== LOGO ===== -->
+    <div class="logo">
+
+      <span class="logo-letter">S</span>
+      <span class="logo-text">tudyBuddy</span>
+    </div>
+
+    <!-- ===== HAMBURGER  ===== -->
+    <button id="menuBtn" class="hamburger" aria-label="Menu">
+      <span>
+        <h2 style="font-size: 24px;"><b>☰</b></h2>
+      </span>
+
+    </button>
+
+    <!-- ===== NAVIGATION ===== -->
+
+    <nav id="navMenu" class="nav-menu">
+
+      <!-- data -->
+      <a href="#" data-section="dashboard" class="active">Dashboard</a>
+      <a href="#" data-section="tasks">Tasks</a>
+      <a href="#" data-section="habits">Habits</a>
+      <a href="#" data-section="resources">Resources</a>
+      <a href="#" data-section="settings">Settings</a>
+
+    </nav>
+  </header>
+
+  <!-- =========================
+     MAIN CONTENT
+========================= -->
+  <main class="app-main">
+
+    <!-- ===== DASHBOARD  ===== -->
+    <section id="dashboard" class="section">
+
+      <h2>Dashboard Overview</h2>
+
+
+
+      <div class="dashboard-cards">
+        <div class="card" id="cardDue">
+          Due Soon: 0
+        </div>
+
+        <div class="card" id="cardCompleted">
+          Completed: 0
+        </div>
+
+        <div class="card" id="cardStreak">
+          Habits: 0
+        </div>
+      </div>
+
+
+      <progress id="progressBar" value="0" max="100"></progress>
+    </section>
+
+    <!-- ===== TASKS  ===== -->
+    <section id="tasks" class="section hidden">
+
+      <h2>Tasks</h2>
+
+      <!-- نموذج إضافة / تعديل مهمة -->
+      <form id="taskForm" class="card form-card">
+
+        <div class="form-group">
+          <input type="text" id="title" placeholder="Task Title">
+          <span class="error" id="titleError"></span>
+        </div>
+
+        <div class="form-group">
+          <input type="text" id="desc" placeholder="Description (optional)">
+        </div>
+
+        <div class="form-group">
+          <input type="date" id="dueDate">
+          <span class="error" id="dateError"></span>
+        </div>
+
+        <div class="form-group">
+          <select id="priority">
+            <option value="">Priority</option>
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <input type="text" id="category" placeholder="Category">
+        </div>
+
+        <!-- زر الإضافة  -->
+        <button id="submitBtn" disabled>Add Task</button>
+      </form>
+
+      <!--  الفلترة والترتيب -->
+      <div class="controls card task-controls">
+
+        <select id="statusFilter">
+          <option value="all">All Status</option>
+          <option value="active">Active</option>
+          <option value="completed">Completed</option>
+        </select>
+
+        <select id="categoryFilter">
+          <option value="all">All Categories</option>
+        </select>
+
+        <select id="sortBy">
+          <option value="date">Sort by Date</option>
+          <option value="priority">Sort by Priority</option>
+        </select>
+
+      </div>
+
+      <!-- قائمة المهام -->
+      <ul id="taskList" class="list"></ul>
+    </section>
+
+    <!-- ===== HABITS  ===== -->
+    <section id="habits" class="section hidden">
+
+      <h2>Habits</h2>
+
+      <!--  إضافة عادة -->
+      <form id="habitForm" class="card form-card">
+
+        <div class="form-group">
+          <input type="text" id="habitName" placeholder="Habit Name">
+        </div>
+
+        <div class="form-group">
+
+          <input type="number" id="goal" min="1" max="7" value="7">
+        </div>
+
+        <button>Add Habit</button>
+      </form>
+
+      <!--  العادات -->
+      <div id="habitList" class="cards-column"></div>
+    </section>
+
+    <!-- ===== RESOURCES  ===== -->
+    <section id="resources" class="section hidden ">
+
+      <h2>Resources</h2>
+
+      <!-- البحث -->
+      <input type="text" id="searchRes" placeholder="Search resources...">
+      <br /> <br />
+
+
+      <!-- فلترة حسب الفئة -->
+      <select id="resCategory">
+        <option value="all">All Categories</option>
+      </select>
+      <br /> <br />
+
+
+      <div id="resourceList" class="cards-column"></div>
+    </section>
+
+    <!-- ===== SETTINGS  ===== -->
+    <section id="settings" class="section hidden">
+
+      <h2>Settings</h2>
+
+      <!-- Dark Mode Switch -->
+      <div class="card switch-card">
+        <span>Dark Mode</span>
+
+        <label class="switch">
+          <input type="checkbox" id="themeSwitch">
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <!-- إعادة تعيين البيانات -->
+      <button id="resetData" class="danger-btn">
+        Reset All Data
+      </button>
+
+
+      <p class="student-name">
+        Project by<br>
+        <strong>Yosuf Eldaor</strong>
+      </p>
+      <p class="app-about">
+        StudyBuddy is a single page application designed to help students
+        manage tasks, build habits, and organize learning resources
+        efficiently using modern web technologies.
+      </p>
+    </section>
+
+  </main>
+
+  <!-- =========================
+     FOOTER
+========================= -->
+  <footer class="app-footer">
+    <p>StudyBuddy SPA © 2026</p>
+    <p>Yosuf Eldaor</p>
+  </footer>
+
+
+  <script src="app.js"></script>
+</body>
+
+</html>
