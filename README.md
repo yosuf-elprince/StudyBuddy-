@@ -2,7 +2,6 @@
 
 - الاسم: **Yosuf  Eldaor**
 - اسم المشروع: **StudyBuddy**
-- المادة: Web Development 1
 
 ## الوصف
 StudyBuddy هو تطبيق ويب من صفحة واحدة (SPA) يهدف إلى مساعدة الطلبة على:
