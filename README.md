@@ -1,79 +1,104 @@
- 
+# StudyBuddy \- Task Management SPA App
 
-- الاسم: **Yosuf  Eldaor**
-- اسم المشروع: **StudyBuddy**
+## Overview
 
-## الوصف
-StudyBuddy هو تطبيق ويب من صفحة واحدة (SPA) يهدف إلى مساعدة الطلبة على:
-- إدارة المهام اليومية (Tasks)
-- تتبع العادات الأسبوعية (Habits)
-- تنظيم مصادر التعلم (Resources)
+StudyBuddy is a Single Page Application (SPA) designed to help students organize their academic life efficiently. The application provides tools for task management, habit tracking, and learning resource organization through a simple and user\-friendly interface.
 
-تم بناء المشروع باستخدام:
-- HTML
-- CSS
-- JavaScript (Vanilla JS)
+## Features
 
+- Task creation and management
+- Habit tracking system
+- Learning resources organization
+- Responsive user interface
+- Single Page Application architecture
+- Easy\-to\-use design for students
 
-###  Dashboard
-عرض عدد المهام المكتملة
-- عرض المهام القريبة من موعد التسليم
-- عرض عدد العادات
-- شريط تقدم  
+## Technologies Used
 
+- HTML5
+- CSS3
+- JavaScript
+- Nginx
+- Docker
 
-###  Tasks
-- إضافة مهمة جديدة
-- تعديل مهمة
-- حذف مهمة
-- تحديد المهمة كمكتملة
-- فلترة حسب:
-  - الحالة (مكتملة / غير مكتملة)
-  - الفئة 
-- ترتيب حسب:
-  - التاريخ
-  - الأولوية
-- التحقق من المدخلات 
-- حفظ البيانات باستخدام LocalStorage
+## Project Structure
 
-###  Habits
-- إضافة عادة جديدة بعدد أيام من 1 إلى 7
-- تتبع الأيام المنجزة لكل عادة
-- زر تلقائي لتحديد يوم منجز
-- ملخص أسبوعي:
-  - عدد العادات المكتملة من إجمالي العادات
-- حفظ البيانات باستخدام LocalStorage
+StudyBuddy\-
 
+├── Dockerfile
 
-### ⭐ Resources
-- تحميل الموارد من ملف JSON باستخدام Fetch
-- البحث عن الموارد
-- فلترة حسب الفئة
-- إضافة الموارد إلى المفضلة (Favorites)
-- حفظ المفضلة باستخدام LocalStorage
-- التعامل مع حالات:
-  - التحميل (Loading)
-  - الخطأ (Error)
+├── .dockerignore
 
+├── .gitignore
 
+├── README.md
 
-###  Settings
-- تفعيل / تعطيل الوضع الليلي (Dark Mode)
-- حفظ الوضع المختار في LocalStorage
-- إعادة تعيين جميع البيانات
+├── docs/
 
+│   ├── notes.md
 
-##  التخزين
-تم استخدام **LocalStorage** لحفظ:
-- المهام (Tasks)
-- العادات (Habits)
-- الموارد المفضلة (Favorites)
-- وضع العرض (Light / Dark)
+│   └── screenshots/
 
----
+└── index.html
 
-##  التصميم
-- يدعم الشاشات الصغيرة والكبيرة
-- استخدام Flexbox و Grid
-- استخدام Google Font (Poppins)
-- دعم Dark Mode
+## Docker Setup
+
+### Build the Docker Image
+
+docker build \-t studybuddy .
+
+### Run the Container
+
+docker run \-d \-p 8080:80 \-\-name studybuddy\-app studybuddy
+
+### Access the Application
+
+Open the browser and visit:
+
+[http://localhost:8080](http://localhost:8080)
+
+### Stop the Container
+
+docker stop studybuddy\-app
+
+### Remove the Container
+
+docker rm studybuddy\-app
+
+## Docker Compose
+
+To start the application using Docker Compose:
+
+docker compose up \-d
+
+To stop the application:
+
+docker compose down
+
+## Testing
+
+After running the container:
+
+1. Open the application in a web browser.
+2. Verify that the homepage loads correctly.
+3. Verify that all main interface elements are displayed properly.
+4. Confirm that the application is accessible through port 8080.
+
+## Documentation
+
+Additional notes are available in:
+
+docs/notes.md
+
+Screenshots are stored in:
+
+docs/screenshots/
+
+## Author
+
+Yosuf Zoher Eldaor
+
+## License
+
+This project is licensed under the MIT License.
+
