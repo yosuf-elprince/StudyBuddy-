@@ -1,0 +1,6 @@
+services:
+  studybuddy:
+    build: .
+    container_name: studybuddy
+    ports:
+      - "8080:80"
