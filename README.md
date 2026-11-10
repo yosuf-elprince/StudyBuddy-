@@ -84,6 +84,9 @@ After running the container:
 3. Verify that all main interface elements are displayed properly.
 4. Confirm that the application is accessible through port 8080.
 
+Assignment Documentation
+This project was containerized using Docker.
+
 ## Documentation
 
 Additional notes are available in:
