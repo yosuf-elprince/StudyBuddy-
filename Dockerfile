@@ -1,6 +1,14 @@
+# Stage 1: Build
+FROM alpine:latest AS builder
+
+WORKDIR /app
+
+COPY . .
+
+# Stage 2: Production
 FROM nginx:alpine
 
-COPY . /usr/share/nginx/html
+COPY --from=builder /app /usr/share/nginx/html
 
 EXPOSE 80
 
