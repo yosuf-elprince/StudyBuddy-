@@ -21,25 +21,29 @@ StudyBuddy is a Single Page Application (SPA) designed to help students organize
 - Nginx
 - Docker
 
-## Project Structure
 
-StudyBuddy\-
-
-├── Dockerfile
-
-├── .dockerignore
-
-├── .gitignore
-
-├── README.md
-
+StudyBuddy-/
+│
+├── .github/
+│   └── workflows/
+│
 ├── docs/
+│   ├── notes.md
+│   └── screenshots/
+│
+├── .dockerignore
+├── .gitignore
+├── Dockerfile
+├── LICENSE
+├── Makefile
+├── README.md
+├── app.js
+├── docker-compose.yml
+├── health.html
+├── index.html
+├── resources.json
+└── style.css
 
-│   ├── notes.md
-
-│   └── screenshots/
-
-└── index.html
 
 ## Docker Setup
 
